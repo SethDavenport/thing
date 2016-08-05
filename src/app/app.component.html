@@ -1,3 +1,7 @@
 <h1>
-  {{title}}
+  wot {{title}}
 </h1>
+
+<button (click)="actions.increment()">+</button>
+{{ count$ | async }}
+<button (click)="actions.decrement()">-</button>

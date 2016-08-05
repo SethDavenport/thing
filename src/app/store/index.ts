@@ -1,20 +1,18 @@
 import { Action, combineReducers } from 'redux';
-
-const INCREMENT = 'INCREMENTTT';
-const DECREMENT = 'DECREMENT';
+import { CounterActions } from '../actions/counter.actions';
 
 export function increment(): Action {
-  return { type: INCREMENT }
+  return { type: CounterActions.INCREMENT }
 }
 
 export function decrement(): Action {
-  return { type: DECREMENT };
+  return { type: CounterActions.DECREMENT };
 }
 
 function counterReducer(state = 0, action: Action) {
   switch(action.type) {
-    case INCREMENT: return state + 1;
-    case DECREMENT: return state - 1;
+    case CounterActions.INCREMENT: return state + 1;
+    case CounterActions.DECREMENT: return state - 1;
   }
 
   return state;

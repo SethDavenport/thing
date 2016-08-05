@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Action } from 'redux';
 import { NgRedux } from 'ng2-redux';
 import { IAppState } from '../store';
 

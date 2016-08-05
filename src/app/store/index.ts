@@ -2,7 +2,7 @@ import { Action, combineReducers } from 'redux';
 import { CounterActions } from '../actions/counter.actions';
 
 export function increment(): Action {
-  return { type: CounterActions.INCREMENT }
+  return { type: CounterActions.INCREMENT };
 }
 
 export function decrement(): Action {
@@ -10,7 +10,7 @@ export function decrement(): Action {
 }
 
 function counterReducer(state = 0, action: Action) {
-  switch(action.type) {
+  switch (action.type) {
     case CounterActions.INCREMENT: return state + 1;
     case CounterActions.DECREMENT: return state - 1;
   }
